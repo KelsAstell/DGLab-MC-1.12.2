@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dglab",
+  "name": "DG-Lab Reborn",
+  "description": "Control a DG-Lab in minecraft, for 1.12.2.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": ["https://twitter.com/yuluoqwq","https://twitter.com/wolf_astell"],
+  "updateUrl": "",
+  "authorList": ["yuluo","ASTELL"],
+  "credits": "yuluo",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

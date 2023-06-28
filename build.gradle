@@ -1,0 +1,88 @@
+// For those who want the bleeding edge
+buildscript {
+    repositories {
+        maven { url 'https://files.minecraftforge.net/maven/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '2.0.4'//1.2.4
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+apply plugin: 'eclipse'
+
+version = "1.0.0"
+group = "wolf.astell.dglab" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "DG-LabReborn"
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+
+minecraft {
+    mappings channel: 'snapshot', version: '20171003-1.12'
+	runs {
+        client {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+        }
+
+        server {
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+        }
+    }
+}
+
+
+
+dependencies {
+	minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
+    compile 'org.java-websocket:Java-WebSocket:1.5.3'//1.5.2
+    compile 'com.neovisionaries:nv-websocket-client:2.9'//2.14
+
+
+    shadow 'org.java-websocket:Java-WebSocket:1.5.3'//1.5.2
+    shadow 'com.neovisionaries:nv-websocket-client:2.9'//2.14
+
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+shadowJar {
+    classifier = ""
+    configurations = [project.configurations.shadow]
+    mergeServiceFiles()
+    relocate 'org.java_websocket', 'wolf.astell.dglab.shadow.org.java_websocket'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'DG-LabReborn',
+                'Implementation-Version': version,
+                'Implementation-Vendor': 'ASTELL(1.12.2);yuluo(1.8.9)',
+                'FMLCorePluginContainsFMLMod': 'true'
+    }
+}
+

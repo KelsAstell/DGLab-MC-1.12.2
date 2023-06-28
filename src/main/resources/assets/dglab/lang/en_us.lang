@@ -1,0 +1,53 @@
+dglab.cmd_name=dglab
+
+dglab.help.connect=/dglab connect [your device address]
+dglab.help.strength=/dglab addstrength <A/B> [strength]
+
+dglab.ws.found=Returning WebSocket client instance:
+dglab.ws.not_found=No WebSocket client instance found.
+dglab.ws.connected=Connected to
+dglab.ws.disconnected=Disconnected from
+dglab.ws.error=Error:
+dglab.ws.terminated=Connection closed by player.
+
+dglab.punish.ultra=§e[Ultra Mode]:
+dglab.punish.damage=§fReceived damage:
+dglab.punish.strength= HP, setting strength to:
+dglab.punish.exceed.1=Channel exceeding the maximum limit (
+dglab.punish.exceed.2=). Setting to max limit.
+dglab.punish.error.player_only=This command can only be used by a player.
+dglab.punish.error.started=Punish already started!
+dglab.punish.error.started_ultra=UltraPunish already started!
+dglab.punish.error.running=Punish task is running, stopping Punish task.
+dglab.punish.error.running_ultra=UltraPunish task is running, stopping UltraPunish task.
+dglab.punish.target_player=Punish started for player:
+dglab.punish.target_player_stop=Punish stopped for player:
+dglab.punish.error.no_task=There's no punish task to stop!
+dglab.punish.settime=Successfully set punishTime to:
+dglab.punish.setrate=Successfully set punishRate to:
+dglab.punish.info.1=Punish Time:
+dglab.punish.info.2=Punish Rate:
+dglab.ultrapunish.target_player=UltraPunish started for player:
+dglab.ultrapunish.target_player_stop=UltraPunish stopped for player:
+dglab.ultrapunish.error.no_task=There's no ultra punish task to stop!
+
+dglab.strength.no_ws=WebSocket connection is not established.
+dglab.strength.setbase=Successfully set base strength to:
+dglab.strength.getbase=Base strength:
+dglab.strength.setmax=Successfully set max strength to:
+dglab.strength.getmax=Max strength:
+dglab.strength.getcurrent=Current strength:
+dglab.strength.seterror=Failed to set strength values. Error:
+dglab.strength.adderror=Failed to add strength values. Error:
+dglab.strength.invalid_channel=Invalid channel. Please use 'a' or 'b'.
+
+
+
+dglab.conf=DG-LAB Config
+config.ws_port.name=Websocket Port
+config.punishtime.name=Punish Time
+config.punishrate.name=Punish Rate
+config.maxA.name=Channel A Max Strength
+config.maxB.name=Channel B Max Strength
+config.baseA.name=Channel A Base Strength
+config.baseB.name=Channel B Base Strength
