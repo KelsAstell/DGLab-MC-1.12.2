@@ -1,7 +1,7 @@
 # DG-Lab-Mod
 一个可以连接到DG-Lab设备并进行操作的Minecraft mod  
 可以根据扣血事件来调整强度
-是https://github.com/YuuLuo/DG-Lab-Mod,的1.12.2版本移植
+是https://github.com/YuuLuo/DG-Lab-Mod 的1.12.2版本移植
 请使用shadow进行打包
 # 改动说明
 ### 2023-06-28
@@ -10,7 +10,7 @@
 3. 代码重构, 减少Debug信息
 4. 修正了1个潜在的Bug, 虽然我也不知道是不是就顺手修了orz
 5. 升级依赖版本
-6. 引入`ModConfig.java`, 由https://github.com/KelsAstell/ChocolateMaker2-1.12.2,提供(还是写一下吧, 毕竟对逻辑做改动了)
+6. 引入`ModConfig.java`, 由https://github.com/KelsAstell/ChocolateMaker2-1.12.2 提供(还是写一下吧, 毕竟对逻辑做改动了)
 7. 我没测试！我没测试！我没测试！重要的话说三遍
 # 连接
 连接部分使用https://github.com/SakuraKoi/DgLabUnlocker 模块的“对外开放Websocket RPC服务端口”功能，所以需要先下载DG-Lab 1.3.2版本：https://dungeon-lab.cn/appDownload/dlab1.3.2.apk ，并安装好DgLabUnlocker模块，在右上角模块设置-功能设置中打开“开放RPC服务端口”，并确保该手机与电脑处于同一网络下。  
